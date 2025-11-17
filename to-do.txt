@@ -1,0 +1,30 @@
+12/11/2025
+--------------------------------------
+
+PBI
+criar os módulos de usuário e de perfil
+ 
+primeiro estrutura, depois faz funcionar, depois melhora
+ 
+obs: nem todos os módulos possuem controller e entidade
+ 
+MER
+Profile
+id - uuid
+name - string
+ 
+User
+id - uuid
+name - string
+email - string
+password - string
+profiles: Profile[]
+ 
+Após isso, e someto no final, testar o typeorm e tentar criar 1 repositório
+
+
+14/11/2025
+--------------------------------------
+
+entidades com typeorm
+container docker mysql

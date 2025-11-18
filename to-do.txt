@@ -28,3 +28,11 @@ Após isso, e someto no final, testar o typeorm e tentar criar 1 repositório
 
 entidades com typeorm
 container docker mysql
+
+
+18/11/25
+--------------------------------------
+
+Fazer o método findById
+Configurar o banco com docker compose
+Baixar bekeeper studio

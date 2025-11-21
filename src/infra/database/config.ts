@@ -9,11 +9,11 @@ export const dataBaseSourceOptions: DataSourceOptions = {
   //porta padrão do mysql
   port: 3306,
   //credenciais
-  username: 'test',
-  password: 'test',
+  username: 'nestuser',
+  password: 'nestpass',
   //nome do BD
-  database: 'test',
-  entities: ['dist/src/modules/**/domain/entities/*.entity.js'],
+  database: 'formdb',
+  entities: ['build/modules/**/entities/*.entity.js'],
   logging: true,
   extra: {
     waitForConnections: true,

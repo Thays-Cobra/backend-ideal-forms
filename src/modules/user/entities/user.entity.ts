@@ -1,5 +1,12 @@
 //Decorators (@) = tipo especial de declaração que pode ser anexada em vários lugares, como classes, métodos, props e params
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  Relation,
+} from 'typeorm';
+import { ProfileEntity } from '../../profile/entities/profile.entity';
 
 //@Entity = indica que a classe é uma entidade e representa a tabela user
 @Entity({ name: 'user' })
@@ -15,13 +22,14 @@ export class UserEntity {
   public email: string;
   @Column()
   public password: string;
-  //public profiles: Profile[]
+  @OneToMany(() => ProfileEntity, (profile) => profile.user)
+  public profiles: Relation<ProfileEntity[]>;
 
   public constructor(data?: Partial<UserEntity>) {
     this.id = data?.id;
     this.name = data?.name;
     this.email = data?.email;
     this.password = data?.password;
-    //profiles ??
+    this.profiles = data?.profiles;
   }
 }
